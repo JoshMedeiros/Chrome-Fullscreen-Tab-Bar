@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Fullscreen Tab Bar",
+    "description": "Fullscreen tab bar based on the style of qutebrowser.",
+    "version": "0.1",
+    "permissions": [ "tabs" ],
+    "background": {
+        "persistent": false,
+        "scripts": [ "background.js" ]
+    },
+    "content_scripts": [ {
+        "run_at": "document_start",
+        "css": [ "content.css" ],
+        "js": [ "content.js" ],
+        "matches": [ "*://*/*" ]
+    } ]
+}
