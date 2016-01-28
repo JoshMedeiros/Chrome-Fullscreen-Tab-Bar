@@ -13,7 +13,7 @@
                         + (tab.active ? ' fullscreen-tab-active' : '') 
                         + ((even = !even) ? ' fullscreen-tab-even' : ' fullscreen-tab-odd')
                         + '" data-id="' + tab.id + '">'
-                        + '<img src="' + tab.favIconUrl + '">' + htmlEncode(tab.title) + '</div>';
+                        + '<img src="' + tab.favIconUrl + '" onerror="this.style.display=\'none\'">' + htmlEncode(tab.title) + '</div>';
             }
             for (var i in tabs) {
                 chrome.tabs.sendMessage(tabs[i].id, html);

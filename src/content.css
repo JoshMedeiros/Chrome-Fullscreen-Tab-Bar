@@ -26,8 +26,7 @@ body {
 #fullscreen-tab-bar .fullscreen-tab {
     height: 12px !important;
     margin: 0 !important;
-    padding: 0 !important;
-    padding-right: 5px !important;
+    padding: 0 5px !important;
     display: table-cell !important;
     color: #fff !important;
     vertical-align: middle !important;
@@ -51,6 +50,7 @@ body {
 #fullscreen-tab-bar .fullscreen-tab img {
     height: 12px !important;
     width: 12px !important;
-    margin: 0 5px !important;
+    margin: 0 !important;
+    margin-right: 5px !important;
     vertical-align: middle !important;
 }
