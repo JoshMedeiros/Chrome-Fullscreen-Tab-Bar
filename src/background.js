@@ -3,8 +3,8 @@
         return document.createElement( 'a' ).appendChild( 
         document.createTextNode( html ) ).parentNode.innerHTML;
     };
-    function tabUpdate() {
-        chrome.tabs.query({}, function(tabs) {
+    function tabUpdate(win) {
+        chrome.tabs.query({windowId: win}, function(tabs) {
             var html = '';
             var even = false;
             for (var i in tabs) {
@@ -21,10 +21,10 @@
         });
     }
 
-   chrome.tabs.onUpdated.addListener(tabUpdate); 
-   chrome.tabs.onCreated.addListener(tabUpdate); 
-   chrome.tabs.onRemoved.addListener(tabUpdate); 
-   chrome.tabs.onActiveChanged.addListener(tabUpdate); 
+   chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {tabUpdate(tab.windowId);});
+   chrome.tabs.onCreated.addListener(function (tab) {tabUpdate(tab.windowId);});
+   chrome.tabs.onRemoved.addListener(function (tabId, removeInfo) {tabUpdate(removeInfo.windowId);});
+   chrome.tabs.onActiveChanged.addListener(function (tabId, selectInfo) {tabUpdate(selectInfo.windowId);});
 
    chrome.runtime.onMessage.addListener(function(data) {
         if (data.action == "activate") {
