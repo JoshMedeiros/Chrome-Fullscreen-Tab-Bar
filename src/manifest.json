@@ -3,7 +3,7 @@
     "name": "Fullscreen Tab Bar",
     "description": "Fullscreen tab bar based on the style of qutebrowser.",
     "author": "Josh Medeiros",
-    "version": "0.1.1",
+    "version": "0.2",
     "permissions": [ "tabs" ],
     "background": {
         "persistent": false,
