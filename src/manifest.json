@@ -14,5 +14,6 @@
         "css": [ "content.css" ],
         "js": [ "content.js" ],
         "matches": [ "*://*/*" ]
-    } ]
+    } ],
+    "web_accessible_resources": [ "tabs.html" ]
 }

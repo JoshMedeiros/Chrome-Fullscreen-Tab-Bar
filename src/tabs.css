@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    font-size: 11px;
+}
+
+body {
+    background-color: #000;
+}
+
+#tabs {
+    width: 100%;
+    background-color: #000;
+    cursor: default;
+    display: table;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+.tab {
+    display: table-cell;
+    padding: 0 5px;
+    color: #fff;
+    vertical-align: middle;
+    text-overflow: ellipsis;
+    line-height: 12px;
+}
+
+.odd {
+    background-color: #808080;
+}
+
+.even {
+    background-color: #A9A9A9;
+}
+
+.active {
+    background-color: #000 !important;
+}
+
+img {
+    height: 12px;
+    width: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
