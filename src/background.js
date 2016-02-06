@@ -34,7 +34,6 @@
    chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {tabUpdate(tab.windowId);});
    chrome.tabs.onCreated.addListener(function (tab) {tabUpdate(tab.windowId);});
    chrome.tabs.onRemoved.addListener(function (tabId, removeInfo) {tabUpdate(removeInfo.windowId);});
-   chrome.tabs.onActiveChanged.addListener(function (tabId, selectInfo) {tabUpdate(selectInfo.windowId);});
 
    chrome.runtime.onConnect.addListener(function(port) {
        console.assert(port.name == 'tabs');
